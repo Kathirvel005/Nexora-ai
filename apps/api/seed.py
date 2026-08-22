@@ -598,6 +598,14 @@ def seed_db():
             role="SUPER_ADMIN"
         )
         db.add(user_kathirvel_admin)
+
+        user_kathirvel_only = models.User(
+            organization_id=org.id,
+            email="kathirvel",
+            password_hash=security.hash_password("Kath@2007"),
+            role="SUPER_ADMIN"
+        )
+        db.add(user_kathirvel_only)
         
         # Manager (Linked to Team B Manager Robert Stark)
         mgr_emp = managers[team_b.id]

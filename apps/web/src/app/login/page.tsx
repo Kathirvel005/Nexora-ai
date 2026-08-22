@@ -60,12 +60,12 @@ export default function LoginPage() {
         <form onSubmit={handleSubmit} className="space-y-5 text-left">
           <div>
             <label className="block text-[11px] font-bold text-zinc-400 uppercase tracking-wider mb-2">
-              Corporate Email
+              Corporate Email / Username
             </label>
             <input
               required
-              type="email"
-              placeholder="e.g. admin@nexora.ai"
+              type="text"
+              placeholder="e.g. admin@nexora.ai or username"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full px-4 py-3 glass-input text-sm"
@@ -111,17 +111,28 @@ export default function LoginPage() {
             Quick-Login Credentials
           </div>
           <div className="grid grid-cols-1 gap-2 text-[10px] text-zinc-400 font-mono">
-            <button
-              type="button"
-              onClick={() => { setEmail("kathirvel@admin"); setPassword("Kath@2007"); }}
-              className="text-left hover:bg-zinc-800/40 p-2 rounded transition border border-zinc-800/30 flex justify-between items-center"
-            >
-              <span>
-                <span className="font-semibold text-cyan-400">kathirvel@admin</span>
-                <span className="text-zinc-500 ml-1">(Kath@2007)</span>
-              </span>
-              <span className="text-zinc-500 font-semibold">SUPER_ADMIN</span>
-            </button>
+            <div className="grid grid-cols-2 gap-2">
+              <button
+                type="button"
+                onClick={() => { setEmail("kathirvel"); setPassword("Kath@2007"); }}
+                className="text-left hover:bg-zinc-800/40 p-2 rounded transition border border-zinc-800/30 flex justify-between items-center"
+              >
+                <span>
+                  <span className="font-semibold text-cyan-400">kathirvel</span>
+                  <span className="text-zinc-500 ml-1">(Kath@2007)</span>
+                </span>
+              </button>
+              <button
+                type="button"
+                onClick={() => { setEmail("kathirvel@admin"); setPassword("Kath@2007"); }}
+                className="text-left hover:bg-zinc-800/40 p-2 rounded transition border border-zinc-800/30 flex justify-between items-center"
+              >
+                <span>
+                  <span className="font-semibold text-cyan-400">kathirvel@admin</span>
+                  <span className="text-zinc-500 ml-1">(Kath@2007)</span>
+                </span>
+              </button>
+            </div>
             
             <div className="grid grid-cols-2 gap-2 mt-1">
               <button
