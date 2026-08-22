@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+sqlalchemy
+passlib[bcrypt]
+python-jose[cryptography]
+python-multipart
+websockets
+networkx
+numpy
+pandas
+redis
+fakeredis
+jinja2
+python-dateutil
