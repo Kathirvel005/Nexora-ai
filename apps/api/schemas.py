@@ -19,11 +19,11 @@ class TokenPayload(BaseModel):
 
 # Authentication & User Schemas
 class UserLogin(BaseModel):
-    email: EmailStr
+    email: str
     password: str
 
 class UserCreate(BaseModel):
-    email: EmailStr
+    email: str
     password: str
     role: str
     organization_name: Optional[str] = None  # To auto-create organization if registering
@@ -31,7 +31,7 @@ class UserCreate(BaseModel):
 
 class UserResponse(BaseModel):
     id: str
-    email: EmailStr
+    email: str
     role: str
     organization_id: str
     employee_id: Optional[str] = None
