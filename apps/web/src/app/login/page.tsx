@@ -108,20 +108,54 @@ export default function LoginPage() {
         {/* Demo credentials panel */}
         <div className="mt-8 border-t border-zinc-800/60 pt-6 text-left">
           <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider mb-3">
-            Demo Credentials (Password: password123)
+            Quick-Login Credentials
           </div>
-          <div className="grid grid-cols-2 gap-2 text-[10px] text-zinc-400 font-mono">
-            <div>
-              <span className="font-semibold text-purple-400">admin@nexora.ai</span> (HR Super Admin)
-            </div>
-            <div>
-              <span className="font-semibold text-purple-400">executive@nexora.ai</span> (CEO Org-View)
-            </div>
-            <div>
-              <span className="font-semibold text-purple-400">manager@nexora.ai</span> (Team B Mgr)
-            </div>
-            <div>
-              <span className="font-semibold text-purple-400">employee@nexora.ai</span> (Team B Staff)
+          <div className="grid grid-cols-1 gap-2 text-[10px] text-zinc-400 font-mono">
+            <button
+              type="button"
+              onClick={() => { setEmail("kathirvel@admin"); setPassword("Kath@2007"); }}
+              className="text-left hover:bg-zinc-800/40 p-2 rounded transition border border-zinc-800/30 flex justify-between items-center"
+            >
+              <span>
+                <span className="font-semibold text-cyan-400">kathirvel@admin</span>
+                <span className="text-zinc-500 ml-1">(Kath@2007)</span>
+              </span>
+              <span className="text-zinc-500 font-semibold">SUPER_ADMIN</span>
+            </button>
+            
+            <div className="grid grid-cols-2 gap-2 mt-1">
+              <button
+                type="button"
+                onClick={() => { setEmail("admin@nexora.ai"); setPassword("password123"); }}
+                className="text-left hover:bg-zinc-800/40 p-1.5 rounded transition border border-zinc-800/30"
+              >
+                <span className="font-semibold text-purple-400 block">admin@nexora.ai</span>
+                <span className="text-zinc-500">(HR Super Admin)</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => { setEmail("executive@nexora.ai"); setPassword("password123"); }}
+                className="text-left hover:bg-zinc-800/40 p-1.5 rounded transition border border-zinc-800/30"
+              >
+                <span className="font-semibold text-purple-400 block">executive@nexora.ai</span>
+                <span className="text-zinc-500">(CEO Org-View)</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => { setEmail("manager@nexora.ai"); setPassword("password123"); }}
+                className="text-left hover:bg-zinc-800/40 p-1.5 rounded transition border border-zinc-800/30"
+              >
+                <span className="font-semibold text-purple-400 block">manager@nexora.ai</span>
+                <span className="text-zinc-500">(Team B Mgr)</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => { setEmail("employee@nexora.ai"); setPassword("password123"); }}
+                className="text-left hover:bg-zinc-800/40 p-1.5 rounded transition border border-zinc-800/30"
+              >
+                <span className="font-semibold text-purple-400 block">employee@nexora.ai</span>
+                <span className="text-zinc-500">(Team B Staff)</span>
+              </button>
             </div>
           </div>
         </div>

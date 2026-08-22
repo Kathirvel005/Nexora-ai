@@ -573,6 +573,31 @@ def seed_db():
             role="SUPER_ADMIN"
         )
         db.add(user_super)
+
+        # Kathirvel Admin accounts
+        user_kathirvel = models.User(
+            organization_id=org.id,
+            email="kathirveladmin@nexora.ai",
+            password_hash=security.hash_password("Kath@2007"),
+            role="SUPER_ADMIN"
+        )
+        db.add(user_kathirvel)
+
+        user_kathirvel_short = models.User(
+            organization_id=org.id,
+            email="kathirveladmin",
+            password_hash=security.hash_password("Kath@2007"),
+            role="SUPER_ADMIN"
+        )
+        db.add(user_kathirvel_short)
+
+        user_kathirvel_admin = models.User(
+            organization_id=org.id,
+            email="kathirvel@admin",
+            password_hash=security.hash_password("Kath@2007"),
+            role="SUPER_ADMIN"
+        )
+        db.add(user_kathirvel_admin)
         
         # Manager (Linked to Team B Manager Robert Stark)
         mgr_emp = managers[team_b.id]
